@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<main class="main">
+			<div class="banner">
+				<div class="container">
+					<div class="banner__header">Touris<span>m</span>.</div>
+					<div class="banner__body">
+						<div class="banner__title">
+							EXPLORE THE
+							<p>DEEP FOREST</p>
+						</div>
+						<div class="banner__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+					</div>
+				</div>
+			</div>
+			<div class="gallery">
+				<div class="container">
+					<div class="gallery__wrapper">
+						<div class="gallery__content">
+							<div class="gallery__heading">
+								<div class="gallery__title title">Gallery</div>
+								<div class="gallery__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, felis quis molestie sollicitudin, orci quam tincidunt diam, id rutrum dui urna sit amet quam.</div>
+							</div>
+							<div class="gallery__body">
+								<div class="gallery__body-wrapper">
+									<div class="gallery__item"><a data-fancybox="gallery" href="*"><img src="img/gallery/1.jpg" alt=""></a></div>
+									<div class="gallery__item"><a data-fancybox="gallery" href="#"><img src="img/gallery/2.jpg" alt=""></a></div>
+									<div class="gallery__item"><a data-fancybox="gallery" href="#"><img src="img/gallery/3.jpg" alt=""></a></div>
+									<div class="gallery__item"><a data-fancybox="gallery" href="#"><img src="img/gallery/4.jpg" alt=""></a></div>
+									<div class="gallery__item"><a data-fancybox="gallery" href="#"><img src="img/gallery/5.jpg" alt=""></a></div>
+									<div class="gallery__item"><a data-fancybox="gallery" href="#"><img src="img/gallery/6.jpg" alt=""></a></div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery__sidebar"><img src="img/gallery-sidebar.jpg" alt=""></div>
+					</div>
+				</div>
+			</div>
+			<div class="infoSlide">
+				<div class="container2">
+					<div class="information">
+						<a class="information__button">Lorem Ipsum</a>
+						<div class="information__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+					</div>
+				</div>
+			</div>
+			<div class="statistics">
+				<div class="container">
+					<div class="statistics__title title">Statistics</div>
+					<div class="statistics__content">
+						<div class="statistics__heading title">Did You Know?</div>
+						<div class="statistics__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet suscipit leo. Sed lectus odio, accumsan vitae suscipit in, posuere et orci. Nunc a feugiat arcu. Proin fringilla lectus non finibus malesuada. In in nulla augue. Integer id lacus ultrices, pharetra tellus a, pulvinar lorem. Pellentesque quis pretium nulla, sit amet efficitur justo. Morbi luctus vehicula diam, vitae facilisis libero ultrices eu.</div>
+						<div class="statistics__body">
+							<div class="statistics__item">
+								<p>2000</p>
+								Lorem Ipsum
+							</div>
+							<div class="statistics__item">
+								<p>23</p>
+								Lorem Ipsum
+							</div>
+							<div class="statistics__item">
+								<p>19382</p>
+								Lorem Ipsum
+							</div>
+							<div class="statistics__item">
+								<p>120</p>
+								Lorem Ipsum
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="videoSlide">
+				<div class="videoSlide__container container">
+					<div class="information">
+						<a class="information__button">Lorem Ipsum</a>
+						<div class="information__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+					</div>
+					<div class="videoSlide__video">
+						<iframe width="1349" height="480" src="https://www.youtube.com/embed/C5q0ULg0nmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="videoSlide__logo">Touris<span>m</span>.</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script>
+		var galleryLinks = $('a[data-fancybox="gallery"]');
+		var galleryImage = $('a[data-fancybox="gallery"]>img');
+		console.log(galleryLinks.length);
+		console.log(galleryImage.length);
+		galleryLinks.map(function(indx, element){
+			$(element).attr("href", $(this).children("img").attr("src"));
+		});
+	</script>
+</body>
+</html>
