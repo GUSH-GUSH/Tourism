@@ -226,13 +226,33 @@ body {
 		object-fit: cover;
 	}
 
+	@media (max-width: $container+px){
+		&__heading {
+			display: flex;
+			margin: 0 0 calc(15px + (55 - 15) * ((100vw - 600px) / (#{$container} - 600))) 0;
+		}
+		&__subtitle {
+			padding: 0 calc(5px + (35 - 5) * ((100vw - 600px) / (#{$container} - 600))) 0 calc(15px + (60 - 15) * ((100vw - 600px) / (#{$container} - 600)));
+			font-size: 13px;
+			font-weight: 300;
+			line-height: 1.54;
+			letter-spacing: 0.52px;
+			color: #000000;
+		}
+	}
+
+	@media(max-width: 1000px){
+		&__item:hover {
+			transform: none;
+		}
+	}
+
 	@media(max-width: 600px){
 		&__content {
 			padding-right: 20px;
 			padding-left: 20px;
 			width: 100%;
 		}
-
 		&__sidebar {
 			display: none;
 			width: 100% / $content * 230;
@@ -242,7 +262,6 @@ body {
 			right: 0;
 			height: calc(100% + 70px);
 		}
-
 		&__heading {
 			display: block;
 			margin: 0 0 15px 0;
@@ -295,8 +314,6 @@ body {
 		color: #ffffff;
 	}
 }
-
-
 
 .statistics {
 	padding: 70px 0 130px 0;
